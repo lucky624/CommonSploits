@@ -11,7 +11,7 @@ cffi==1.12.3
 chardet==3.0.4
 checklib==0.2.8
 Click==7.0
-cryptography==2.9
+cryptography==3.2
 filelock==3.0.12
 Flask==1.1.1
 future==0.18.2
