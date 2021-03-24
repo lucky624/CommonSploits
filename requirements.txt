@@ -60,7 +60,7 @@ PyYAML==5.1.2
 redis==3.3.8
 requests==2.22.0
 ROPGadget==5.8
-rsa==4.0
+rsa==4.1
 ruamel.appconfig==0.5.4
 ruamel.std.argparse==0.8.1
 selenium==3.141.0
