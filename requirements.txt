@@ -43,7 +43,7 @@ pyasn1==0.4.7
 pycparser==2.19
 pycrypto==2.6.1
 pyelftools==0.25
-Pygments==2.4.2
+Pygments==2.7.4
 pymongo==3.9.0
 PyMySQL==0.9.3
 PyMysqlDB==0.0.2
