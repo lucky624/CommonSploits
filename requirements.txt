@@ -37,7 +37,7 @@ protobuf==3.11.3
 psutil==5.6.3
 psycopg2==2.8.3
 psycopg2-binary==2.8.3
-pwntools==2.2.1
+pwntools==4.3.1
 py==1.8.0
 pyasn1==0.4.7
 pycparser==2.19
