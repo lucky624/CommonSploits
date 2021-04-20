@@ -38,7 +38,7 @@ psutil==5.6.3
 psycopg2==2.8.3
 psycopg2-binary==2.8.3
 pwntools==2.2.1
-py==1.8.0
+py==1.10.0
 pyasn1==0.4.7
 pycparser==2.19
 pycrypto==2.6.1
