@@ -71,7 +71,7 @@ toml==0.10.0
 tox==3.14.0
 typing-extensions==3.7.4.1
 unicorn==1.0.1
-urllib3==1.25.6
+urllib3==1.25.8
 virtualenv==16.7.5
 websocket-client==0.57.0
 websockets==8.1
