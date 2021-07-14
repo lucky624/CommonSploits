@@ -46,7 +46,7 @@ def parse_args():
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('sploit', help='Sploit executable')
-    parser.add_argument('--server-url', default='http://192.168.0.100', help='Server URL')
+    parser.add_argument('--server-url', default='http://farm:5000', help='Server URL')
 
     parser.add_argument('--pool-size', type=int, default=50,
                         help='Maximal number of concurrent sploit instances '

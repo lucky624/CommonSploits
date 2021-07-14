@@ -33,5 +33,10 @@ print(file)
 #    )
 #}
 
+data = {
+        'email': 'email',
+        'password': 'password',
+}
 
-print(s.post('http://{}/bWAPP/unrestricted_file_upload.php'.format(ip),files=file,data=submit).text)
+
+print(s.post('http://{}/bWAPP/unrestricted_file_upload.php'.format(ip),files=file,data=data).text)

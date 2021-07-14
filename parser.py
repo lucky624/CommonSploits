@@ -4,7 +4,7 @@ from selenium import webdriver
 options = webdriver.ChromeOptions()
 #options.add_argument('headless')
 options.add_argument('window-size=1920x1080')
-driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver", chrome_options=options)
+driver = webdriver.Chrome("/home/lucky/tools/chromedriver_linux64/chromedriver", chrome_options=options)
 
 url = 'https://scoreboard.ctf.saarland/'
 scoreboard = driver.get(url)
@@ -27,4 +27,3 @@ for ip in ips:
 
 for i in range(0,205):
     print("'" + teams_list[i] + "'"  + ':' + "'"  + ips_list[i] + "',")
-
