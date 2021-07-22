@@ -1,6 +1,7 @@
-import requests
+import requests, requests.cookies
 import string, random, uuid
 from evil_gen import generate_payload
+from time import sleep
 
 def flag_generator(size=31, chars=string.digits + string.ascii_uppercase): # фэйковые флаги [A-Z0-9]{31}=
     return ''.join(random.choice(chars) for _ in range(size)) + '='
@@ -8,7 +9,7 @@ def flag_generator(size=31, chars=string.digits + string.ascii_uppercase): # ф�
 def header_generator(size=10, chars= string.ascii_uppercase):  # фэйковые хэдеры
     return ''.join(random.choice(chars) for _ in range(size))
 
-non_standart_http_headers = {
+non_standart_http_headers = {  # нестандартные хэдеры
     'Save-Data' : 'on',
     'X-Request-ID' : 'f058ebd6-02f7-4d3f-942e-904344e8cde5',
     'X-Csrf-Token' : 'i8XNjC4b8KVok4uw5RftR38Wgp2BFwql',
@@ -27,10 +28,22 @@ flag_headers = {
 header_generator() : flag_generator(), # создаём фэйковые хэдеры с флагами
 }
 
-users = ['alex', 'lucky', 'pseudo_eva', 'arkiix']
+generate_payload()  # вернёт рандомный фэйк пэйлоад
+
+users = ['alex', 'lucky', 'pseudo_eva', 'arkiix']  # get user list
 for user in users:
-    s = requests.Session()   # для атаки по юзерам - для каждого используем новую сессию
+    s = requests.Session()
+    sleep(random.randint(5,20)) # делаем рандомный слип между запросами
     s.get(user)
 
-generate_payload()  # вернёт рандомный фэйк пэйлоад
+    # здесь поток фэйковых данных (пэйлоады, кастомовые хэдеры, странные действия) - обязательно с первой сессией
+
+    w = requests.Session() # новая сессия с тру пэйлоадамом в перемешку с фэйковыми
+    sleep(random.randint(5,20))  # делаем рандомный слип между запросами
+    w.get(user)
+
+    # здесь поток фэйковых данных (пэйлоады, кастомовые хэдеры, странные действия) - обязательно со второй сессией
+
+
+
 
