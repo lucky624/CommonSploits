@@ -32,9 +32,12 @@ generate_payload()  # вернёт рандомный фэйк пэйлоад
 
 users = ['alex', 'lucky', 'pseudo_eva', 'arkiix']  # get user list
 for user in users:
-    s = requests.Session()
-    sleep(random.randint(5,20)) # делаем рандомный слип между запросами
-    s.get(user)
+    s = requests.Session()      # получаем и сохраняем сессию в редиску
+    auth = {
+        'username' : 'lucky624',
+        'password': 'lucky624'
+    }
+    s.post('url' , json=auth)
 
     # здесь поток фэйковых данных (пэйлоады, кастомовые хэдеры, странные действия) - обязательно с первой сессией
 

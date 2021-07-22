@@ -361,7 +361,7 @@ evil_payloads = [
 import random
 
 def generate_payload():
-    return evil_payloads[random.randint(0, 357)]
+    return evil_payloads[random.randint(0, len(evil_payloads))]
 
 
 
