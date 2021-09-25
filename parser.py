@@ -16,7 +16,7 @@ ips_css = 'body > app-root > div > app-scoretable > table > tbody > tr > td.team
 teams = driver.find_elements_by_css_selector(teams_css)
 ips = driver.find_elements_by_css_selector(ips_css)
 
-#teams_list = []
+teams_list = []
 ips_list = []
 
 for team in teams:
