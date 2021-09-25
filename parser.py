@@ -9,8 +9,8 @@ driver = webdriver.Chrome("/home/lucky/tools/chromedriver_linux64/chromedriver",
 url = 'https://scoreboard.ctf.saarland/'
 scoreboard = driver.get(url)
 
-teams_css = 'body > app-root > div > app-scoretable > table > tbody > tr > td.teamcell > div.media-body > h4'
-ips_css = 'body > app-root > div > app-scoretable > table > tbody > tr > td.teamcell > div.media-body > span.team-vulnbox'
+#teams_css = 'body > app-root > div > app-scoretable > table > tbody > tr > td.teamcell > div.media-body > h4'
+#ips_css = 'body > app-root > div > app-scoretable > table > tbody > tr > td.teamcell > div.media-body > span.team-vulnbox'
 
 
 teams = driver.find_elements_by_css_selector(teams_css)
